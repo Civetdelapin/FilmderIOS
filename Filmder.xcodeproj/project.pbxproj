@@ -13,6 +13,7 @@
 		890FE71521C94F7D00500A47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 890FE71421C94F7D00500A47 /* Assets.xcassets */; };
 		890FE71821C94F7D00500A47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890FE71621C94F7D00500A47 /* LaunchScreen.storyboard */; };
 		890FE73F21C950AC00500A47 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890FE73E21C950AC00500A47 /* DataBase.swift */; };
+		89DD1BB602A5158C40FAE7C2 /* Pods_Filmder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */; };
 		9F3FEC4721C9946100110096 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; };
 		9F3FEC4821C9946B00110096 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; };
 		9F3FEC4921C9946B00110096 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +93,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8905CBEED6599BDD7199F928 /* Pods-Filmder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filmder/Pods-Filmder.debug.xcconfig"; sourceTree = "<group>"; };
 		890FE70A21C94F7B00500A47 /* Filmder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filmder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		890FE70D21C94F7B00500A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		890FE70F21C94F7B00500A47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,8 @@
 		890FE71921C94F7D00500A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		890FE73E21C950AC00500A47 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		9F3FEC2E21C9942800110096 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		A7CCB847B1FA1ED39882C0DF /* Pods-Filmder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filmder/Pods-Filmder.release.xcconfig"; sourceTree = "<group>"; };
+		CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filmder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 			files = (
 				9F3FEC4821C9946B00110096 /* SQLite.framework in Frameworks */,
 				9F3FEC4721C9946100110096 /* SQLite.framework in Frameworks */,
+				89DD1BB602A5158C40FAE7C2 /* Pods_Filmder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +128,7 @@
 				890FE70B21C94F7B00500A47 /* Products */,
 				9F3FEC2E21C9942800110096 /* SQLite.xcodeproj */,
 				9F3FEC4621C9946100110096 /* Frameworks */,
+				F081469FAAE2F26A0DA643F7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,8 +171,18 @@
 		9F3FEC4621C9946100110096 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F081469FAAE2F26A0DA643F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8905CBEED6599BDD7199F928 /* Pods-Filmder.debug.xcconfig */,
+				A7CCB847B1FA1ED39882C0DF /* Pods-Filmder.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 890FE71C21C94F7D00500A47 /* Build configuration list for PBXNativeTarget "Filmder" */;
 			buildPhases = (
+				207E1943D52B260F8AC78682 /* [CP] Check Pods Manifest.lock */,
 				890FE70621C94F7B00500A47 /* Sources */,
 				890FE70721C94F7B00500A47 /* Frameworks */,
 				890FE70821C94F7B00500A47 /* Resources */,
 				890FE73D21C94FF400500A47 /* Embed Frameworks */,
+				950503F3B4F0D4308CCCDF14 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +312,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		207E1943D52B260F8AC78682 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Filmder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		950503F3B4F0D4308CCCDF14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Filmder/Pods-Filmder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filmder/Pods-Filmder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		890FE70621C94F7B00500A47 /* Sources */ = {
@@ -452,6 +517,7 @@
 		};
 		890FE71D21C94F7D00500A47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8905CBEED6599BDD7199F928 /* Pods-Filmder.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -470,6 +536,7 @@
 		};
 		890FE71E21C94F7D00500A47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7CCB847B1FA1ED39882C0DF /* Pods-Filmder.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
