@@ -28,8 +28,7 @@ class DataBase {
     
     let types_table = Table("types")
     let types_id = Expression<Int>("id")
-    let types_type = Expression<Int>("type")
-    
+    let types_type = Expression<String>("type")
     
     static func GetInstance()->DataBase{
     
@@ -40,30 +39,49 @@ class DataBase {
         return dataBaseInstance!
     }
     
-    
+
     private init() {
         
         
-        // ---- CREER DATABASE ICI (COPIER LE CODE DU PROF)
+        // ---------- CREATION DE L'OBJ DATABASE -----------
+        
+        do
+        {
+            let documentDirectory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let fileUrl = documentDirectory.appendingPathComponent("data_base").appendingPathExtension("sqlite3")
+            let base = try Connection(fileUrl.path)
+            self.database = base;
+        }
+        catch
+        {
+            print (error)
+        }
+        // -------------------------------------------------
         
         
         // --------- CREATION DES BASES DE DONNEES ---------
         
         let createTableMovies = self.movies_table.create(ifNotExists: true) { table in
             table.column(self.movies_id, primaryKey : true)
+            
             table.column(self.movies_title)
             table.column(self.movies_release_date)
             table.column(self.movies_image_path)
         }
         
+        let createTableTypes = self.types_table.create(ifNotExists : true){ table in
+            table.column(self.types_id, primaryKey : true)
+            table.column(self.types_id, primaryKey : .autoincrement)
+            
+            table.column(self.types_type)
+        }
+        
         let createTableMoviesTypes = self.movies_types_table.create(ifNotExists: true){ table in
             table.column(self.movies_types_id_movies, primaryKey : true)
             table.column(self.movies_types_id_types, primaryKey : true)
-        }
-        
-        let createTableTypes = self.types_table.create(ifNotExists : true){ table in
-            table.column(self.types_id, primaryKey : true)
-            table.column(self.types_type)
+            
+            table.foreignKey(self.movies_types_id_movies, references: movies_table, self.movies_id)
+            table.foreignKey(self.movies_types_id_types, references: types_table, self.types_id)
         }
         
         
@@ -72,12 +90,24 @@ class DataBase {
             try self.database.run(createTableTypes)
             try self.database.run(createTableMovies)
             try self.database.run(createTableMoviesTypes)
+
+            let tableTypesCount = try database.scalar(types_table.count);
+            if(tableTypesCount == 0){
+                
+                try self.database.run(types_table.insert(types_type <- "Archived"))
+                try self.database.run(types_table.insert(types_type <- "To see"))
+                try self.database.run(types_table.insert(types_type <- "Seen"))
+                
+            }
+            
             
         }
         catch {
             print(error)
         }
 
+        
+        
         // ------------------------------------------------
     }
     
