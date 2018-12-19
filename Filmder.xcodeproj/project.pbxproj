@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		890FE70E21C94F7B00500A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890FE70D21C94F7B00500A47 /* AppDelegate.swift */; };
-		890FE71021C94F7B00500A47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890FE70F21C94F7B00500A47 /* ViewController.swift */; };
 		890FE71321C94F7B00500A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890FE71121C94F7B00500A47 /* Main.storyboard */; };
 		890FE71521C94F7D00500A47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 890FE71421C94F7D00500A47 /* Assets.xcassets */; };
 		890FE71821C94F7D00500A47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 890FE71621C94F7D00500A47 /* LaunchScreen.storyboard */; };
 		890FE73F21C950AC00500A47 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890FE73E21C950AC00500A47 /* DataBase.swift */; };
 		89DD1BB602A5158C40FAE7C2 /* Pods_Filmder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */; };
+		9F08A7FA21CA960A00350AAE /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08A7F921CA960A00350AAE /* DrawerViewController.swift */; };
+		9F08A80221CA963400350AAE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08A80121CA963400350AAE /* MainViewController.swift */; };
+		9F08A80421CAA35A00350AAE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08A80321CAA35A00350AAE /* MenuViewController.swift */; };
 		9F3FEC4721C9946100110096 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; };
 		9F3FEC4821C9946B00110096 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; };
 		9F3FEC4921C9946B00110096 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -96,12 +98,14 @@
 		8905CBEED6599BDD7199F928 /* Pods-Filmder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filmder/Pods-Filmder.debug.xcconfig"; sourceTree = "<group>"; };
 		890FE70A21C94F7B00500A47 /* Filmder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Filmder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		890FE70D21C94F7B00500A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		890FE70F21C94F7B00500A47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		890FE71221C94F7B00500A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		890FE71421C94F7D00500A47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		890FE71721C94F7D00500A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		890FE71921C94F7D00500A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		890FE73E21C950AC00500A47 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		9F08A7F921CA960A00350AAE /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		9F08A80121CA963400350AAE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9F08A80321CAA35A00350AAE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9F3FEC2E21C9942800110096 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		A7CCB847B1FA1ED39882C0DF /* Pods-Filmder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filmder/Pods-Filmder.release.xcconfig"; sourceTree = "<group>"; };
 		CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filmder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,12 +148,14 @@
 			isa = PBXGroup;
 			children = (
 				890FE70D21C94F7B00500A47 /* AppDelegate.swift */,
-				890FE70F21C94F7B00500A47 /* ViewController.swift */,
 				890FE71121C94F7B00500A47 /* Main.storyboard */,
 				890FE71421C94F7D00500A47 /* Assets.xcassets */,
 				890FE71621C94F7D00500A47 /* LaunchScreen.storyboard */,
 				890FE71921C94F7D00500A47 /* Info.plist */,
 				890FE73E21C950AC00500A47 /* DataBase.swift */,
+				9F08A7F921CA960A00350AAE /* DrawerViewController.swift */,
+				9F08A80121CA963400350AAE /* MainViewController.swift */,
+				9F08A80321CAA35A00350AAE /* MenuViewController.swift */,
 			);
 			path = Filmder;
 			sourceTree = "<group>";
@@ -365,9 +371,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890FE71021C94F7B00500A47 /* ViewController.swift in Sources */,
+				9F08A7FA21CA960A00350AAE /* DrawerViewController.swift in Sources */,
+				9F08A80421CAA35A00350AAE /* MenuViewController.swift in Sources */,
 				890FE73F21C950AC00500A47 /* DataBase.swift in Sources */,
 				890FE70E21C94F7B00500A47 /* AppDelegate.swift in Sources */,
+				9F08A80221CA963400350AAE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
