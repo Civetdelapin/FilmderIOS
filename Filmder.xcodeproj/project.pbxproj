@@ -14,11 +14,14 @@
 		890FE73F21C950AC00500A47 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890FE73E21C950AC00500A47 /* DataBase.swift */; };
 		89DD1BB602A5158C40FAE7C2 /* Pods_Filmder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */; };
 		9F08A7FA21CA960A00350AAE /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08A7F921CA960A00350AAE /* DrawerViewController.swift */; };
-		9F08A80221CA963400350AAE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08A80121CA963400350AAE /* MainViewController.swift */; };
+		9F08A80221CA963400350AAE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08A80121CA963400350AAE /* MainTabBarController.swift */; };
 		9F08A80421CAA35A00350AAE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F08A80321CAA35A00350AAE /* MenuViewController.swift */; };
 		9F3FEC4721C9946100110096 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; };
 		9F3FEC4821C9946B00110096 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; };
 		9F3FEC4921C9946B00110096 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3FEC3921C9942800110096 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F71F10021CBEAA700EEAE9D /* ToSeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71F0FF21CBEAA700EEAE9D /* ToSeeTableViewController.swift */; };
+		9F71F10821CBF33C00EEAE9D /* ArchivedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71F10721CBF33C00EEAE9D /* ArchivedTableViewController.swift */; };
+		9F71F10A21CBF36300EEAE9D /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71F10921CBF36300EEAE9D /* DiscoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,9 +107,12 @@
 		890FE71921C94F7D00500A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		890FE73E21C950AC00500A47 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		9F08A7F921CA960A00350AAE /* DrawerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
-		9F08A80121CA963400350AAE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9F08A80121CA963400350AAE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9F08A80321CAA35A00350AAE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9F3FEC2E21C9942800110096 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
+		9F71F0FF21CBEAA700EEAE9D /* ToSeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSeeTableViewController.swift; sourceTree = "<group>"; };
+		9F71F10721CBF33C00EEAE9D /* ArchivedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedTableViewController.swift; sourceTree = "<group>"; };
+		9F71F10921CBF36300EEAE9D /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
 		A7CCB847B1FA1ED39882C0DF /* Pods-Filmder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filmder/Pods-Filmder.release.xcconfig"; sourceTree = "<group>"; };
 		CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filmder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,8 +160,11 @@
 				890FE71921C94F7D00500A47 /* Info.plist */,
 				890FE73E21C950AC00500A47 /* DataBase.swift */,
 				9F08A7F921CA960A00350AAE /* DrawerViewController.swift */,
-				9F08A80121CA963400350AAE /* MainViewController.swift */,
+				9F08A80121CA963400350AAE /* MainTabBarController.swift */,
 				9F08A80321CAA35A00350AAE /* MenuViewController.swift */,
+				9F71F0FF21CBEAA700EEAE9D /* ToSeeTableViewController.swift */,
+				9F71F10721CBF33C00EEAE9D /* ArchivedTableViewController.swift */,
+				9F71F10921CBF36300EEAE9D /* DiscoverViewController.swift */,
 			);
 			path = Filmder;
 			sourceTree = "<group>";
@@ -373,9 +382,12 @@
 			files = (
 				9F08A7FA21CA960A00350AAE /* DrawerViewController.swift in Sources */,
 				9F08A80421CAA35A00350AAE /* MenuViewController.swift in Sources */,
+				9F71F10821CBF33C00EEAE9D /* ArchivedTableViewController.swift in Sources */,
 				890FE73F21C950AC00500A47 /* DataBase.swift in Sources */,
 				890FE70E21C94F7B00500A47 /* AppDelegate.swift in Sources */,
-				9F08A80221CA963400350AAE /* MainViewController.swift in Sources */,
+				9F71F10A21CBF36300EEAE9D /* DiscoverViewController.swift in Sources */,
+				9F71F10021CBEAA700EEAE9D /* ToSeeTableViewController.swift in Sources */,
+				9F08A80221CA963400350AAE /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

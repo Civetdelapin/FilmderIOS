@@ -9,8 +9,8 @@
 import UIKit
 import KYDrawerController
 
-class MainViewController: UIViewController {
-
+class MainTabBarController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -19,6 +19,10 @@ class MainViewController: UIViewController {
         if let drawerController = navigationController?.parent as? KYDrawerController {
             drawerController.setDrawerState(.opened, animated: true)
         }
+    }
+    
+    
+    @IBAction func clicFilterButton(_ sender: UIBarButtonItem) {
     }
     
 }
