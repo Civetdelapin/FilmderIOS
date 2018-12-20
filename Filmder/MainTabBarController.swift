@@ -13,6 +13,7 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.selectedIndex = 2
     }
     
     @IBAction func clicMenuButton(_ sender: UIBarButtonItem) {

@@ -5,4 +5,5 @@ use_frameworks!
 
 target 'Filmder' do
 	pod 'KYDrawerController'
+	pod 'Koloda'
 end

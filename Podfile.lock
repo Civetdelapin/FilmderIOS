@@ -1,16 +1,24 @@
 PODS:
+  - Koloda (4.5.1):
+    - pop (~> 1.0)
   - KYDrawerController (2.1.0)
+  - pop (1.0.12)
 
 DEPENDENCIES:
+  - Koloda
   - KYDrawerController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Koloda
     - KYDrawerController
+    - pop
 
 SPEC CHECKSUMS:
+  Koloda: fc08984dc013b4d5aff3bd7265a8874e6784b5ef
   KYDrawerController: baad0e63b09c0cb564bd48f0f7f70f45d9176ebc
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
 
-PODFILE CHECKSUM: 09a6cd454db4411660e1300a878203c4664d8734
+PODFILE CHECKSUM: ba79b4083c86fd7ccf3e1c72bcbac5916116ceb2
 
 COCOAPODS: 1.5.3
