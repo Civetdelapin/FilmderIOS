@@ -28,7 +28,8 @@ class MenuViewController: UITableViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainTabBarController:UITabBarController = storyboard.instantiateViewController(withIdentifier: "mainTabBarController") as! UITabBarController
-        //let kyDrawerController:KYDrawerController =            storyboard.instantiateViewController(withIdentifier: "kyDrawerController") as! KYDrawerController
+        let mainNavigationController:UINavigationController =            storyboard.instantiateViewController(withIdentifier: "mainNavigationController") as! UINavigationController
+        let ky:KYDrawerController =            storyboard.instantiateViewController(withIdentifier: "kyDrawerController") as! KYDrawerController
         
         
         print(mainTabBarController.title)
@@ -54,6 +55,7 @@ class MenuViewController: UITableViewController {
         
         print(mainTabBarController.selectedIndex)
         
+        
         ///// RIEN NE FONCTIONNE /////
         
         //show(mainTabBarController, sender: self)
@@ -64,7 +66,14 @@ class MenuViewController: UITableViewController {
         
         //self.present(mainTabBarController, animated: true, completion: nil)
         
-        //self.present(kyDrawerController, animated: false, completion: nil)
+        //self.present(ky, animated: false, completion: nil)
+        
+        //mainNavigationController.pushViewController(mainTabBarController, animated: true)
+        //mainNavigationController.present(mainTabBarController, animated: true, completion: nil)
+        
+        //ky.mainViewController = mainTabBarController
+        
+        //self.navigationController?.pushViewController(mainTabBarController, animated: true)
     }
 
 

@@ -22,6 +22,7 @@
 		9F71F10021CBEAA700EEAE9D /* ToSeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71F0FF21CBEAA700EEAE9D /* ToSeeTableViewController.swift */; };
 		9F71F10821CBF33C00EEAE9D /* ArchivedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71F10721CBF33C00EEAE9D /* ArchivedTableViewController.swift */; };
 		9F71F10A21CBF36300EEAE9D /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F71F10921CBF36300EEAE9D /* DiscoverViewController.swift */; };
+		9FBF890121CD0EA500FE47E0 /* PopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF890021CD0EA500FE47E0 /* PopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		9F71F0FF21CBEAA700EEAE9D /* ToSeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSeeTableViewController.swift; sourceTree = "<group>"; };
 		9F71F10721CBF33C00EEAE9D /* ArchivedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedTableViewController.swift; sourceTree = "<group>"; };
 		9F71F10921CBF36300EEAE9D /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		9FBF890021CD0EA500FE47E0 /* PopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopViewController.swift; sourceTree = "<group>"; };
 		A7CCB847B1FA1ED39882C0DF /* Pods-Filmder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filmder/Pods-Filmder.release.xcconfig"; sourceTree = "<group>"; };
 		CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filmder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -165,6 +167,7 @@
 				9F71F0FF21CBEAA700EEAE9D /* ToSeeTableViewController.swift */,
 				9F71F10721CBF33C00EEAE9D /* ArchivedTableViewController.swift */,
 				9F71F10921CBF36300EEAE9D /* DiscoverViewController.swift */,
+				9FBF890021CD0EA500FE47E0 /* PopViewController.swift */,
 			);
 			path = Filmder;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			files = (
 				9F08A7FA21CA960A00350AAE /* DrawerViewController.swift in Sources */,
 				9F08A80421CAA35A00350AAE /* MenuViewController.swift in Sources */,
+				9FBF890121CD0EA500FE47E0 /* PopViewController.swift in Sources */,
 				9F71F10821CBF33C00EEAE9D /* ArchivedTableViewController.swift in Sources */,
 				890FE73F21C950AC00500A47 /* DataBase.swift in Sources */,
 				890FE70E21C94F7B00500A47 /* AppDelegate.swift in Sources */,

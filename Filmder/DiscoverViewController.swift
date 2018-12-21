@@ -63,6 +63,10 @@ extension DiscoverViewController: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         //UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let popViewController = storyBoard.instantiateViewController(withIdentifier: "popViewController")
+        self.navigationController?.pushViewController(popViewController, animated: true)
+        //self.present(popViewController, animated: true, completion: nil)
     }
     
 }
