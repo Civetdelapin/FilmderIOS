@@ -19,7 +19,7 @@ class DiscoverViewController: UIViewController {
     fileprivate var dataSource: [UIImage] = {
         var array: [UIImage] = []
         for index in 0..<numberOfCards {
-            array.append(UIImage(named: "Film")!) //UIImage(named: "Card_like_\(index + 1)")
+            array.append(UIImage(named: "Film")!)
         }
         
         return array
@@ -36,17 +36,16 @@ class DiscoverViewController: UIViewController {
         self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
     }
     
-    
     // MARK: IBActions
-    /*
-    @IBAction func leftButtonTapped() {
+    
+    @IBAction func leftButtonClick(_ sender: UIButton) {
         kolodaView?.swipe(.left)
     }
     
-    @IBAction func rightButtonTapped() {
+    @IBAction func rightButtonClick(_ sender: UIButton) {
         kolodaView?.swipe(.right)
     }
-    */
+    
 }
 
 // MARK: KolodaViewDelegate
@@ -62,11 +61,20 @@ extension DiscoverViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        //UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let popViewController = storyBoard.instantiateViewController(withIdentifier: "popViewController")
         self.navigationController?.pushViewController(popViewController, animated: true)
         //self.present(popViewController, animated: true, completion: nil)
+    }
+    
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        if(direction == .right){
+            print("Swip right")
+            //ACTION DE SWIP DROITE ICI
+        }else{
+            print("Swip left")
+            //ACTION DE SWIP GAUCHE ICI
+        }
     }
     
 }

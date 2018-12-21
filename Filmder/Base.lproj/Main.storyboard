@@ -186,14 +186,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfY-ju-Yg4" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="45" y="173" width="284" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfY-ju-Yg4" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="45" y="173" width="285" height="336"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <viewLayoutGuide key="safeArea" id="1nH-2c-OPU"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLi-6r-2bp">
+                                <rect key="frame" x="229" y="549" width="62" height="30"/>
+                                <state key="normal" title="Accepter">
+                                    <color key="titleColor" red="0.017866051210000001" green="0.42517406089999998" blue="0.1126220055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonClick:" destination="wqy-ps-wDx" eventType="touchUpInside" id="ucM-Mf-2al"/>
+                                    <action selector="rightButtonClick:" destination="wqy-ps-wDx" eventType="touchUpInside" id="blZ-mf-Y86"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKe-L3-0w8">
+                                <rect key="frame" x="99" y="549" width="49" height="30"/>
+                                <state key="normal" title="Rejeter">
+                                    <color key="titleColor" red="0.51868118523316054" green="0.024142036217526943" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonClick:" destination="wqy-ps-wDx" eventType="touchUpInside" id="5AR-C6-Geg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MPS-NO-xOK" firstAttribute="bottom" secondItem="PKe-L3-0w8" secondAttribute="bottom" constant="39" id="9YH-02-Ud2"/>
+                            <constraint firstItem="PKe-L3-0w8" firstAttribute="top" secondItem="HfY-ju-Yg4" secondAttribute="bottom" constant="40" id="CDp-0h-uLd"/>
+                            <constraint firstItem="HfY-ju-Yg4" firstAttribute="centerX" secondItem="MPS-NO-xOK" secondAttribute="centerX" id="NAM-I6-mye"/>
+                            <constraint firstItem="HfY-ju-Yg4" firstAttribute="leading" secondItem="MPS-NO-xOK" secondAttribute="leading" constant="45" id="Reo-9A-jWH"/>
+                            <constraint firstItem="MPS-NO-xOK" firstAttribute="trailing" secondItem="qLi-6r-2bp" secondAttribute="trailing" constant="92" id="W5T-gD-Suo"/>
+                            <constraint firstItem="MPS-NO-xOK" firstAttribute="bottom" secondItem="qLi-6r-2bp" secondAttribute="bottom" constant="39" id="XJa-pK-gOI"/>
+                            <constraint firstItem="HfY-ju-Yg4" firstAttribute="top" secondItem="MPS-NO-xOK" secondAttribute="top" constant="109" id="Xdf-Lh-fbZ"/>
+                            <constraint firstItem="PKe-L3-0w8" firstAttribute="leading" secondItem="MPS-NO-xOK" secondAttribute="leading" constant="100" id="YPF-Q6-TNu"/>
+                            <constraint firstItem="qLi-6r-2bp" firstAttribute="leading" secondItem="PKe-L3-0w8" secondAttribute="trailing" constant="91" id="dYq-vA-esy"/>
+                            <constraint firstItem="HfY-ju-Yg4" firstAttribute="centerY" secondItem="MPS-NO-xOK" secondAttribute="centerY" id="x2X-bC-MfN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MPS-NO-xOK"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Découvrir" id="0dd-Q7-biq"/>
@@ -493,10 +523,10 @@
             </objects>
             <point key="canvasLocation" x="1040.8" y="1975.4122938530736"/>
         </scene>
-        <!--View Controller-->
+        <!--ActeurViewController-->
         <scene sceneID="jCh-tI-16w">
             <objects>
-                <viewController id="cML-E9-ytF" sceneMemberID="viewController">
+                <viewController title="ActeurViewController" id="cML-E9-ytF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sCt-3g-wy5">
                         <rect key="frame" x="0.0" y="0.0" width="182" height="239"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
