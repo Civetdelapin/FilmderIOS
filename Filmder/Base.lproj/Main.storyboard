@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLt-2j-7UP">
-                                <rect key="frame" x="16" y="103" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75H-56-cLN">
                                 <rect key="frame" x="16" y="143" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,6 +41,13 @@
                                     <action selector="noLikeButtonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Icf-CO-UV0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLt-2j-7UP">
+                                <rect key="frame" x="16" y="104" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -370,7 +370,7 @@
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUL-QX-XOe">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="971"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="Film" translatesAutoresizingMaskIntoConstraints="NO" id="eki-gX-awx">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="Film" translatesAutoresizingMaskIntoConstraints="NO" id="eki-gX-awx">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72J-6A-37h">
@@ -550,6 +550,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="4rQ-em-UJQ"/>
                     <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="dateUILable" destination="JMQ-Vg-VP8" id="q3F-01-irU"/>
+                        <outlet property="directorUILable" destination="1vh-9g-TDw" id="HzM-8N-Tbp"/>
+                        <outlet property="genresUILabel" destination="Nw4-qU-b3q" id="eYB-9M-HtV"/>
+                        <outlet property="lengthUILabel" destination="slD-Ih-CYD" id="win-fx-HLQ"/>
+                        <outlet property="posterUIImageView" destination="eki-gX-awx" id="IG3-qs-bUe"/>
+                        <outlet property="scoreUILabel" destination="AuR-7g-eWa" id="dPu-0V-2vT"/>
+                        <outlet property="synopsisUILabel" destination="SeP-iM-HE4" id="CPv-9Q-1fW"/>
+                        <outlet property="titleUILable" destination="72J-6A-37h" id="3f0-Oe-SsY"/>
+                        <outlet property="writersUILabel" destination="w18-CU-bE6" id="DFp-rv-dGO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNB-52-DAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -583,6 +594,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Xnj-aE-Ocf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjW-te-XW4" userLabel="First Responder" sceneMemberID="firstResponder"/>

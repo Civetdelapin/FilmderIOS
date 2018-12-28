@@ -8,15 +8,20 @@
 
 import UIKit
 import Koloda
+import Kingfisher
+import TMDBSwift
 
-private var numberOfCards: Int = 5
+private var numberOfCards: Int = 1
 
 class DiscoverViewController: UIViewController {
 
     @IBOutlet weak var kolodaView: KolodaView!
     
+    private var apikey = "bb43e72055ce4efbf7bedaad66a91e6d"
+    
     
     fileprivate var dataSource: [UIImage] = {
+        
         var array: [UIImage] = []
         for index in 0..<numberOfCards {
             array.append(UIImage(named: "Film")!)
@@ -29,6 +34,7 @@ class DiscoverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        TMDBConfig.apikey = self.apikey
         
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -46,6 +52,7 @@ class DiscoverViewController: UIViewController {
         kolodaView?.swipe(.right)
     }
     
+
 }
 
 // MARK: KolodaViewDelegate
@@ -62,8 +69,14 @@ extension DiscoverViewController: KolodaViewDelegate {
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let popViewController = storyBoard.instantiateViewController(withIdentifier: "popViewController")
-        self.navigationController?.pushViewController(popViewController, animated: true)
+        let popViewController:PopViewController = storyBoard.instantiateViewController(withIdentifier: "popViewController") as! PopViewController
+        
+        popViewController.movie = MoviesHandler.GetInstance().GetMovieAtIndex(index: index)
+        
+        if(popViewController.movie != nil){
+            self.navigationController?.pushViewController(popViewController, animated: true)
+        }
+        
         //self.present(popViewController, animated: true, completion: nil)
     }
     
@@ -92,7 +105,17 @@ extension DiscoverViewController: KolodaViewDataSource {
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: dataSource[Int(index)])
+        
+        var imageView = UIImageView(image: dataSource[Int(index)]);
+        MoviesHandler.GetInstance().GetMovieAtIndex(index: index){ data in
+            
+            var urlString = "https://image.tmdb.org/t/p/original"+(data?.poster_path)!
+            
+            let url = URL(string: urlString)
+            imageView.kf.setImage(with: url)
+        }
+        
+        return imageView
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {

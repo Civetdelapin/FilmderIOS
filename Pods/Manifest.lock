@@ -1,24 +1,38 @@
 PODS:
-  - Koloda (4.5.1):
+  - Kingfisher (4.10.1)
+  - Koloda (4.6):
     - pop (~> 1.0)
   - KYDrawerController (2.1.0)
   - pop (1.0.12)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
+  - TMDBSwift (0.5.1)
 
 DEPENDENCIES:
+  - Kingfisher
   - Koloda
   - KYDrawerController
+  - SQLite.swift (~> 0.11.5)
+  - TMDBSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - Koloda
     - KYDrawerController
     - pop
+    - SQLite.swift
+    - TMDBSwift
 
 SPEC CHECKSUMS:
-  Koloda: fc08984dc013b4d5aff3bd7265a8874e6784b5ef
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Koloda: bcf5acded25fc49020d1447ed8ddd87e14d01e7e
   KYDrawerController: baad0e63b09c0cb564bd48f0f7f70f45d9176ebc
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+  TMDBSwift: 9220f3dcee23372c05b92f8c111f5f4c37185aee
 
-PODFILE CHECKSUM: ba79b4083c86fd7ccf3e1c72bcbac5916116ceb2
+PODFILE CHECKSUM: 15da6befd57da942527e713fe311ba67ba2cce8e
 
 COCOAPODS: 1.5.3
