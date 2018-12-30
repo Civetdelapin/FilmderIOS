@@ -8,6 +8,7 @@
 
 import Foundation
 import SQLite
+import TMDBSwift
 
 class DataBase {
     
@@ -70,15 +71,16 @@ class DataBase {
         }
         
         let createTableTypes = self.types_table.create(ifNotExists : true){ table in
-            table.column(self.types_id, primaryKey : true)
             table.column(self.types_id, primaryKey : .autoincrement)
             
             table.column(self.types_type)
         }
         
         let createTableMoviesTypes = self.movies_types_table.create(ifNotExists: true){ table in
-            table.column(self.movies_types_id_movies, primaryKey : true)
-            table.column(self.movies_types_id_types, primaryKey : true)
+            table.column(self.movies_types_id_movies)
+            table.column(self.movies_types_id_types)
+            
+            table.primaryKey(self.movies_types_id_types, movies_types_id_movies)
             
             table.foreignKey(self.movies_types_id_movies, references: movies_table, self.movies_id)
             table.foreignKey(self.movies_types_id_types, references: types_table, self.types_id)
@@ -87,28 +89,58 @@ class DataBase {
         
         do {
             
+            print("DROP TABLE TYPES")
+            try self.database.run(types_table.drop(ifExists : true))
+            
+            print("DROP TABLE MOVIES")
+            try self.database.run(movies_table.drop(ifExists : true))
+            
+            print("DROP TABLE MOVIES TYPES")
+            try self.database.run(movies_types_table.drop(ifExists : true))
+            
+            print("CREATE TABLE TYPES")
             try self.database.run(createTableTypes)
+            
+            print("CREATE TABLE MOVIES")
             try self.database.run(createTableMovies)
+            
+            print("CREATE TABLE MOVIES TYPES")
             try self.database.run(createTableMoviesTypes)
 
             let tableTypesCount = try database.scalar(types_table.count);
             if(tableTypesCount == 0){
                 
+                print("INSERT INTO TABLE TYPES")
                 try self.database.run(types_table.insert(types_type <- "Archived"))
                 try self.database.run(types_table.insert(types_type <- "To see"))
                 try self.database.run(types_table.insert(types_type <- "Seen"))
                 
             }
             
-            
         }
         catch {
             print(error)
         }
-
-        
         
         // ------------------------------------------------
+    }
+    
+    
+    
+    public func insertMovie(movie:DiscoverMovieMDB, wichList:Int){
+        
+        let insertMovie = movies_table.insert(movies_id <- movie.id,movies_title <- movie.title!, movies_release_date <- movie.release_date!, movies_image_path <- movie.poster_path!)
+        
+        let insertMovieType = movies_types_table.insert( movies_types_id_movies <- movie.id, movies_types_id_types <- wichList  )
+        
+        do {
+            print("INSERT MOVIE " + movie.title! + " INTO " + String(wichList))
+            try self.database.run(insertMovie)
+            try self.database.run(insertMovieType)
+        } catch {
+            print(error)
+        }
+        
     }
     
     

@@ -81,12 +81,19 @@ extension DiscoverViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        
+        var movie = MoviesHandler.GetInstance().GetMovieAtIndex(index: index)
+        
         if(direction == .right){
-            print("Swip right")
+            
             //ACTION DE SWIP DROITE ICI
+            print("Swip right")
+            DataBase.GetInstance().insertMovie(movie: movie!, wichList : 1)
         }else{
-            print("Swip left")
+            
             //ACTION DE SWIP GAUCHE ICI
+            print("Swip left")
+            DataBase.GetInstance().insertMovie(movie: movie!, wichList : 0)
         }
     }
     

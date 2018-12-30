@@ -41,7 +41,7 @@ class PopViewController: UIViewController {
         */
         
         var urlString = "https://image.tmdb.org/t/p/original"+(movie.backdrop_path)!
-        print(urlString)
+        
         
         let url = URL(string: urlString)
         posterUIImageView.kf.setImage(with: url)
@@ -55,9 +55,11 @@ class PopViewController: UIViewController {
                     //SHOULD HANDLE MULTIPLE DIRECTORS AND WRITERS
                     if(crew.job == "Director"){
                         self.directorUILable.text = crew.name
-                    }else if (crew.job == "Story"){
+                    }else if (crew.job == "Screenplay"){
                         self.writersUILabel.text = crew.name
                     }
+                    
+                    
                 }
                 
                 /*
