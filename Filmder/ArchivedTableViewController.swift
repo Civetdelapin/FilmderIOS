@@ -12,6 +12,8 @@ class ArchivedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        DataBase.GetInstance().getMovies(wichList: DataBase.ARCHIVED)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

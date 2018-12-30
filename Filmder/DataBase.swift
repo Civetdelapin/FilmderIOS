@@ -13,6 +13,10 @@ import TMDBSwift
 class DataBase {
     
     
+    public static let ARCHIVED:Int = 0;
+    public static let TO_SEE:Int = 1;
+    public static let SEEN:Int = 2;
+    
     private static var dataBaseInstance: DataBase?
     
     private var database: Connection!
@@ -111,9 +115,9 @@ class DataBase {
             if(tableTypesCount == 0){
                 
                 print("INSERT INTO TABLE TYPES")
-                try self.database.run(types_table.insert(types_type <- "Archived"))
-                try self.database.run(types_table.insert(types_type <- "To see"))
-                try self.database.run(types_table.insert(types_type <- "Seen"))
+                try self.database.run(types_table.insert(types_id <- DataBase.ARCHIVED ,types_type <- "Archived"))
+                try self.database.run(types_table.insert(types_id <- DataBase.TO_SEE, types_type <- "To see"))
+                try self.database.run(types_table.insert(types_id <- DataBase.SEEN, types_type <- "Seen"))
                 
             }
             
@@ -143,5 +147,22 @@ class DataBase {
         
     }
     
+    
+    public func getMovies(wichList:Int) {
+        
+        
+        
+        let selectMovies = movies_table.join(movies_types_table, on: movies_id == movies_types_id_movies && movies_types_id_types == wichList)
+        
+        do {
+            print("SELECT MOVIES FROM " + String(wichList))
+            for movie in try database.prepare(selectMovies) {
+                print("id: \(movie[movies_id]), title: \(movie[movies_title])")
+            }
+            
+        }catch {
+            print(error)
+        }
+    }
     
 }
