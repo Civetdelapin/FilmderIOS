@@ -13,6 +13,8 @@ class ToSeeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var movieArray: [Movie] = DataBase.GetInstance().getMovies(wichList: DataBase.TO_SEE)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

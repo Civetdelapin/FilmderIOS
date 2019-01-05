@@ -147,22 +147,53 @@ class DataBase {
         
     }
     
+    public func removeMovie(movieId:Int){
+        
+        do{
+            try database.transaction {
+                let movieType = movies_types_table.filter(movies_types_id_movies ==  movieId)
+                try database.run(movieType.delete())
+                
+                let movie = movies_table.filter(movies_id == movieId)
+                try database.run(movie.delete())
+            }
+        }catch {
+            print(error)
+        }
+        
+    }
     
-    public func getMovies(wichList:Int) {
+    public func updateMovieList(movieId:Int, newList:Int){
+       
+        do {
+            let movieType = movies_types_table.filter(movies_types_id_movies ==  movieId)
+            try database.run(movieType.update(movies_types_id_types <- newList))
+        }catch{
+            print(error)
+        }
         
+    }
+    
+    public func getMovies(wichList:Int) -> [Movie] {
         
+        var movieArray: [Movie] = []
         
         let selectMovies = movies_table.join(movies_types_table, on: movies_id == movies_types_id_movies && movies_types_id_types == wichList)
-        
+    
         do {
             print("SELECT MOVIES FROM " + String(wichList))
             for movie in try database.prepare(selectMovies) {
-                print("id: \(movie[movies_id]), title: \(movie[movies_title])")
+                
+                let m = Movie(movieId: movie[movies_id], movieTitle: movie[movies_title], movieReleaseDate: movie[movies_release_date], movieImagePath: movie[movies_image_path])
+                
+                movieArray.append(m)
             }
             
         }catch {
             print(error)
         }
+        
+        return movieArray
     }
     
 }
