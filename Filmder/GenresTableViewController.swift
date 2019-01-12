@@ -1,19 +1,17 @@
 //
-//  ArchivedTableViewController.swift
+//  GenresTableViewController.swift
 //  Filmder
 //
-//  Created by MacNicolas on 20/12/2018.
-//  Copyright © 2018 civetdelapin. All rights reserved.
+//  Created by MacNicolas on 12/01/2019.
+//  Copyright © 2019 civetdelapin. All rights reserved.
 //
 
 import UIKit
 
-class ArchivedTableViewController: UITableViewController {
+class GenresTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-         var movieArray: [Movie] = DataBase.GetInstance().getMovies(wichList: DataBase.ARCHIVED)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,26 +24,23 @@ class ArchivedTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "movieArchivedCell", for: indexPath) as! MovieArchivedTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        //cell.toSeeImageView?.image =
-        cell.archivedTitle?.text = "Test titre"
-        cell.archivedDateText?.text = "Test date"
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
