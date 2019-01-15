@@ -49,6 +49,7 @@ class MenuViewController: UITableViewController {
             print("Paramètres")
         case 4:
             print("A propos")
+            //show(storyboard.instantiateViewController(withIdentifier: "aboutViewController") as! UIViewController, sender: self)
         default:
             print("Option de menu introuvable")
         }
