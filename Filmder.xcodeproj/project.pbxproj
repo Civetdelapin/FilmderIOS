@@ -124,12 +124,12 @@
 				9F08A80321CAA35A00350AAE /* MenuViewController.swift */,
 				9F71F0FF21CBEAA700EEAE9D /* ToSeeTableViewController.swift */,
 				9F71F10721CBF33C00EEAE9D /* ArchivedTableViewController.swift */,
+				9FC025B421E967BA0049EF91 /* FilterViewController.swift */,
 				9F71F10921CBF36300EEAE9D /* DiscoverViewController.swift */,
 				9FBF890021CD0EA500FE47E0 /* PopViewController.swift */,
 				7C00090221E0B9CF00338B3D /* Movie.swift */,
 				9FC025B021E95A740049EF91 /* MovieToSeeTableViewCell.swift */,
 				9FC025B221E95E620049EF91 /* MovieArchivedTableViewCell.swift */,
-				9FC025B421E967BA0049EF91 /* FilterViewController.swift */,
 				9FC025B621E96A270049EF91 /* GenresTableViewController.swift */,
 			);
 			path = Filmder;

@@ -165,6 +165,8 @@ class DataBase {
     
     public func updateMovieList(movieId:Int, newList:Int){
        
+        print ("UPDATE MOVIE " + String(movieId) + " INTO " + String(newList))
+        
         do {
             let movieType = movies_types_table.filter(movies_types_id_movies ==  movieId)
             try database.run(movieType.update(movies_types_id_types <- newList))

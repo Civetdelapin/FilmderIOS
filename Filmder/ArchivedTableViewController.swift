@@ -10,16 +10,25 @@ import UIKit
 
 class ArchivedTableViewController: UITableViewController {
 
+    private var movieArray: [Movie] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         var movieArray: [Movie] = DataBase.GetInstance().getMovies(wichList: DataBase.ARCHIVED)
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("WILL APPEAR ARCHIVED")
+        
+        movieArray = DataBase.GetInstance().getMovies(wichList: DataBase.ARCHIVED)
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -31,7 +40,7 @@ class ArchivedTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return movieArray.count
     }
 
     
@@ -40,9 +49,15 @@ class ArchivedTableViewController: UITableViewController {
 
         // Configure the cell...
         //cell.toSeeImageView?.image =
-        cell.archivedTitle?.text = "Test titre"
-        cell.archivedDateText?.text = "Test date"
+        cell.archivedTitle?.text = movieArray[indexPath.item].getTitle()
+        cell.archivedDateText?.text = movieArray[indexPath.item].getReleaseDate()
 
+        let urlString = "https://image.tmdb.org/t/p/original"+(movieArray[indexPath.item].getImagePath())
+        
+        let url = URL(string: urlString)
+        cell.archivedImageView.kf.setImage(with: url)
+        
+        
         return cell
     }
     

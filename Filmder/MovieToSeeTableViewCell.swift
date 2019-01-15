@@ -14,6 +14,7 @@ class MovieToSeeTableViewCell: UITableViewCell {
     @IBOutlet weak var toSeeTitle: UILabel!
     @IBOutlet weak var toSeeDateText: UILabel!
     
+    @IBOutlet weak var toSeeButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

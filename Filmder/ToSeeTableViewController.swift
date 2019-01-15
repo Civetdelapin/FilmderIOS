@@ -10,16 +10,25 @@ import UIKit
 
 class ToSeeTableViewController: UITableViewController {
 
+    private var movieArray: [Movie] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var movieArray: [Movie] = DataBase.GetInstance().getMovies(wichList: DataBase.TO_SEE)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("WILL APPEAR TO SEE")
+        
+        movieArray = DataBase.GetInstance().getMovies(wichList: DataBase.TO_SEE)
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -31,7 +40,7 @@ class ToSeeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return movieArray.count
     }
 
     
@@ -39,14 +48,36 @@ class ToSeeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "movieToSeeCell", for: indexPath) as! MovieToSeeTableViewCell
 
         // Configure the cell...
-        //cell.toSeeImageView?.image =
-        cell.toSeeTitle?.text = "Test titre"
-        cell.toSeeDateText?.text = "Test date"
-
+        cell.toSeeTitle?.text = movieArray[indexPath.item].getTitle()
+        cell.toSeeDateText?.text = movieArray[indexPath.item].getReleaseDate()
+        
+        let urlString = "https://image.tmdb.org/t/p/original"+(movieArray[indexPath.item].getImagePath())
+        
+        let url = URL(string: urlString)
+        cell.toSeeImageView.kf.setImage(with: url)
+        
+        cell.toSeeButton.tag = indexPath.item
+        cell.toSeeButton.addTarget(self, action: #selector(ToSeeTableViewController.buttonPressed(sender:)), for: .touchUpInside)
+        
+        print("made row" + String(indexPath.item))
+        
         return cell
     }
     
-
+    @objc func buttonPressed(sender: UIButton){
+        
+        DataBase.GetInstance().updateMovieList(movieId: movieArray[sender.tag].getId(), newList: DataBase.ARCHIVED)
+        
+        movieArray.remove(at: sender.tag)
+        
+        let contentOffset = self.tableView.contentOffset
+        self.tableView.reloadData()
+        self.tableView.layoutIfNeeded()
+        self.tableView.setContentOffset(contentOffset, animated: false)
+        
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
