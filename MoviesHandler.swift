@@ -38,6 +38,8 @@ class MoviesHandler {
             if let movieArr = movieArr{
                 self.movies = movieArr
                 
+                self.movies.shuffle()
+                
                 completion(movieArr[0])
             }
         }
