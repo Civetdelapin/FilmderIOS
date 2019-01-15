@@ -26,6 +26,7 @@
 		9FC025B321E95E620049EF91 /* MovieArchivedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC025B221E95E620049EF91 /* MovieArchivedTableViewCell.swift */; };
 		9FC025B521E967BA0049EF91 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC025B421E967BA0049EF91 /* FilterViewController.swift */; };
 		9FC025B721E96A270049EF91 /* GenresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC025B621E96A270049EF91 /* GenresTableViewController.swift */; };
+		9FC025B921E9711E0049EF91 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC025B821E9711E0049EF91 /* AboutViewController.swift */; };
 		AA34665C4C0BFD9D253DCCBE /* Pods_Filmder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8442524190C9829B5EDD9B06 /* Pods_Filmder.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		9FC025B221E95E620049EF91 /* MovieArchivedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieArchivedTableViewCell.swift; sourceTree = "<group>"; };
 		9FC025B421E967BA0049EF91 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		9FC025B621E96A270049EF91 /* GenresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresTableViewController.swift; sourceTree = "<group>"; };
+		9FC025B821E9711E0049EF91 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A7CCB847B1FA1ED39882C0DF /* Pods-Filmder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filmder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filmder/Pods-Filmder.release.xcconfig"; sourceTree = "<group>"; };
 		CFCBCECED8E5824AFF75D1F3 /* Pods_Filmder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filmder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				9FC025B021E95A740049EF91 /* MovieToSeeTableViewCell.swift */,
 				9FC025B221E95E620049EF91 /* MovieArchivedTableViewCell.swift */,
 				9FC025B621E96A270049EF91 /* GenresTableViewController.swift */,
+				9FC025B821E9711E0049EF91 /* AboutViewController.swift */,
 			);
 			path = Filmder;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				9F71F10021CBEAA700EEAE9D /* ToSeeTableViewController.swift in Sources */,
 				7C00090321E0B9CF00338B3D /* Movie.swift in Sources */,
 				9F08A80221CA963400350AAE /* MainTabBarController.swift in Sources */,
+				9FC025B921E9711E0049EF91 /* AboutViewController.swift in Sources */,
 				9FC025B321E95E620049EF91 /* MovieArchivedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
